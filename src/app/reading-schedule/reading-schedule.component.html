@@ -1,0 +1,26 @@
+<div class="p-5">
+
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col">
+      <h2>Today's Reading: pgs {{currentReading}}</h2>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <div *ngIf="readings" class="row">
+      <div class="col-3"></div>
+      <div class="col">
+  <h2 class="table-header" (click)="toggleShowAll()">View All Readings</h2>
+        <div *ngIf="showAllReadings">
+      <div *ngFor="let reading of readings; index as i">
+        <div class="table-item" [ngClass]="{'odd': (i % 2)}">
+          <span>Date: {{reading.date.format('LLLL')}}</span>
+          <span>Pages: {{reading.pages}}</span>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>

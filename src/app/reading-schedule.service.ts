@@ -20,8 +20,6 @@ export class ReadingScheduleService {
     let readingIncrement = 1;
     
     while(currentPage < numPages){
-
-      console.log(readingIncrement)
       
       let readingDay = new ReadingDay(moment(currentDate), currentPage + ' - ' + (currentPage + readingIncrement));
     

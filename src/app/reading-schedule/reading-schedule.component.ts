@@ -24,12 +24,11 @@ export class ReadingScheduleComponent implements OnInit {
   constructor(private service: ReadingScheduleService) { }
 
   ngOnInit() {
-    console.log(moment())
 
     this.currentDate = moment('2019-01-21');
     this.readings = this.service.getDailyReadings(this.currentDate, this.START_PAGE, this.END_PAGE);
     this.readings.forEach(readingDay => {
-      if(readingDay.date.get('date') === moment().get('date')){
+      if(readingDay.date.isSame(moment(), 'day')){
         console.log(readingDay)
         this.currentReading = readingDay.pages;
       }

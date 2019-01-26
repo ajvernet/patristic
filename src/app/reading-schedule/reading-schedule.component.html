@@ -15,8 +15,8 @@
         <div *ngIf="showAllReadings">
       <div *ngFor="let reading of readings; index as i">
         <div class="table-item" [ngClass]="{'odd': (i % 2)}">
-          <span>Date: {{reading.date.format('LLL')}}</span>
-          <span>Pages: {{reading.pages}}</span>
+          <span>Date: {{reading.date.format('LL')}}</span>
+          <span class="pl-3">Pages: {{reading.pages}}</span>
         </div>
       </div>
     </div>

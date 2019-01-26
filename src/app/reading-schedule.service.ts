@@ -16,11 +16,14 @@ export class ReadingScheduleService {
     let currentDate = startDate;
 
     let readingsList = new Array<ReadingDay>();
+
+    let readingIncrement = 1;
     
     while(currentPage < numPages){
 
+      console.log(readingIncrement)
       
-      let readingDay = new ReadingDay(moment(currentDate), currentPage + ' - ' + (currentPage + 1));
+      let readingDay = new ReadingDay(moment(currentDate), currentPage + ' - ' + (currentPage + readingIncrement));
     
       // if(currentDate.day() != 0){}
       currentDate.add(1, 'days');
@@ -28,16 +31,19 @@ export class ReadingScheduleService {
       if(currentDate.weekday() != 1){
         readingsList.push(readingDay);
 
-        if(currentPage < 89){
-        currentPage += 2;
-        } else {
-          currentPage +=4
+        currentPage += (1 + readingIncrement);
+        }
+        
+        if(currentPage >= 38) {
+          readingIncrement = 3
         }
       }
+
+      return readingsList;
     }
     
 
-    return readingsList;
-  }
+
+  
 
   }

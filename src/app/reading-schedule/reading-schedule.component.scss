@@ -1,5 +1,9 @@
 .wrapper {
+    @media (min-width: 1470px){
     padding: 5rem 30rem;
+    }
+    padding: 5rem;
+    
     text-align: center;
 }
 

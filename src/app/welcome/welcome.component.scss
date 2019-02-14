@@ -3,12 +3,20 @@ p {
     font-size: 1.3rem;
 }
 
+
 .text-wrapper{
     background-color: #020c00fa;
-    padding: 4rem;
+
+    @media (min-width:1470px){
+      padding: 4rem;
+    }
+
+    padding: 6rem;
 }
+
+@media (min-width: 1470px){
 .wrapper {
-    padding: 4rem 30rem;
-    display: inline-grid;
+    padding: 5rem 30rem;
     background-color: #042201ce
+}
 }

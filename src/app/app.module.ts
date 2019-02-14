@@ -5,11 +5,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReadingScheduleComponent } from './reading-schedule/reading-schedule.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReadingScheduleComponent
+    ReadingScheduleComponent,
+    NavbarComponent,
+    WelcomeComponent
   ],
   imports: [
     NgbModule,

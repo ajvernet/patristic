@@ -8,6 +8,7 @@ import { ReadingScheduleComponent } from './reading-schedule/reading-schedule.co
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BannerComponent } from './banner/banner.component';
+import { BookInfoComponent } from './book-info/book-info.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BannerComponent } from './banner/banner.component';
     ReadingScheduleComponent,
     NavbarComponent,
     WelcomeComponent,
-    BannerComponent
+    BannerComponent,
+    BookInfoComponent
   ],
   imports: [
     NgbModule,

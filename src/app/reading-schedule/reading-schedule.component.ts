@@ -15,8 +15,8 @@ export class ReadingScheduleComponent implements OnInit {
   currentReading: string;
   showAllReadings:boolean = false;
 
-  START_PAGE = 13;
-  END_PAGE = 327;
+  START_PAGE = 53;
+  END_PAGE = 227;
 
   readings: ReadingDay[];
 
@@ -25,7 +25,7 @@ export class ReadingScheduleComponent implements OnInit {
 
   ngOnInit() {
 
-    this.currentDate = moment('2019-01-21');
+    this.currentDate = moment('2019-09-24');
     this.readings = this.service.getDailyReadings(this.currentDate, this.START_PAGE, this.END_PAGE);
     this.readings.forEach(readingDay => {
       if(readingDay.date.isSame(moment(), 'day')){

@@ -1,11 +1,11 @@
 p {
-    color:white;
+    color:black;
     font-size: 1.3rem;
 }
 
 
 .text-wrapper{
-    background-color: #020c00fa;
+    // background-color: #020c00fa;
 
     @media (min-width:1470px){
       padding: 4rem;
@@ -17,6 +17,6 @@ p {
 @media (min-width: 1470px){
 .wrapper {
     padding: 5rem 30rem;
-    background-color: #042201ce
+    background-color:white
 }
 }

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ReadingScheduleComponent } from './reading-schedule/reading-schedule.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReadingScheduleComponent,
     NavbarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    BannerComponent
   ],
   imports: [
     NgbModule,

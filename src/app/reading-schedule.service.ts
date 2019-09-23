@@ -9,36 +9,32 @@ export class ReadingScheduleService {
 
   constructor() {}
 
-
-  getDailyReadings(startDate: moment.Moment, startPage: number, numPages: number): Array<any>{
-    let currentPage = startPage;
-
-    let currentDate = startDate;
-
-    let readingsList = new Array<ReadingDay>();
-
-    let readingIncrement = 1;
-    
-    while(currentPage < numPages){
+    getDailyReadings(startDate: moment.Moment, startPage: number, numPages: number): Array<any>{
+      let currentPage = startPage;
+  
+      let currentDate = startDate;
+  
+      let readingsList = new Array<ReadingDay>();
+  
+      let readingIncrement = 1;
       
-      let readingDay = new ReadingDay(moment(currentDate), currentPage + ' - ' + (currentPage + readingIncrement));
-    
-      // if(currentDate.day() != 0){}
-      currentDate.add(1, 'days');
-
-      if(currentDate.weekday() != 1){
-        readingsList.push(readingDay);
-
-        currentPage += (1 + readingIncrement);
-        }
+      while(currentPage < numPages){
         
-        if(currentPage >= 38) {
-          readingIncrement = 3
+        let readingDay = new ReadingDay(moment(currentDate), currentPage + ' - ' + (currentPage + readingIncrement));
+      
+        currentDate.add(1, 'days');
+  
+        //should this be == 1?
+        if(currentDate.weekday() != 1){
+          readingsList.push(readingDay);
+  
+          currentPage += (1 + readingIncrement);
+          }
+          
         }
+  
+        return readingsList;
       }
-
-      return readingsList;
-    }
     
 
 
